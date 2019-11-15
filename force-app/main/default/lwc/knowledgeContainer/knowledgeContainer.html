@@ -1,0 +1,27 @@
+<template>
+  <lightning-input
+    type="search"
+    onkeyup={handleKeyUp}
+    is-loading={searchInFlight}
+    label="Search Knowledge"
+  ></lightning-input>
+  <template for:each={articles} for:item="article">
+    <div key={article.Id} data-id={article.Id} class="card-container" onclick={handleArticleClick}>
+      <lightning-card>
+        <h3 slot="title">
+          <lightning-icon
+            icon-name="utility:connected_apps"
+            size="small"
+          ></lightning-icon>
+          {article.Title}
+        </h3>
+        <div slot="footer">
+          <lightning-badge label="Tag1"></lightning-badge>
+          <lightning-badge label="Tag2"></lightning-badge>
+          <lightning-badge label="Tag3"></lightning-badge>
+        </div>
+        <p class="slds-p-horizontal_small summary">{article.Summary}</p>
+      </lightning-card>
+    </div>
+  </template>
+</template>

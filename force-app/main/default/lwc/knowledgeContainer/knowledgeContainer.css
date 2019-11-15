@@ -1,0 +1,12 @@
+.card-container {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  max-width: 40rem;
+}
+.summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
